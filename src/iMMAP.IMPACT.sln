@@ -1,0 +1,40 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 15
+VisualStudioVersion = 15.0.26430.16
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "iMMAP.IMPACT", "iMMAP.iMPACT\iMMAP.IMPACT.csproj", "{51C8706A-75F8-49C9-AD0B-CA4224AFB5DC}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "iMMAP.IMPACT.Models", "iMMAP.iMPACT.Models\iMMAP.IMPACT.Models.csproj", "{1E5E91F8-23D4-4619-B879-0BF95FDB0A65}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "iMMAP.IMPACT.Identity", "iMMAP.iMPACT.Identity\iMMAP.IMPACT.Identity.csproj", "{B77A905B-C5BF-470F-B005-568BE79899B7}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "iMMAP.IMPACT.Console", "iMMAP.iMPACT.Console\iMMAP.IMPACT.Console.csproj", "{2ADD81B9-3009-42D2-8A81-DF239300FC92}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{51C8706A-75F8-49C9-AD0B-CA4224AFB5DC}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{51C8706A-75F8-49C9-AD0B-CA4224AFB5DC}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{51C8706A-75F8-49C9-AD0B-CA4224AFB5DC}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{51C8706A-75F8-49C9-AD0B-CA4224AFB5DC}.Release|Any CPU.Build.0 = Release|Any CPU
+		{1E5E91F8-23D4-4619-B879-0BF95FDB0A65}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{1E5E91F8-23D4-4619-B879-0BF95FDB0A65}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{1E5E91F8-23D4-4619-B879-0BF95FDB0A65}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{1E5E91F8-23D4-4619-B879-0BF95FDB0A65}.Release|Any CPU.Build.0 = Release|Any CPU
+		{B77A905B-C5BF-470F-B005-568BE79899B7}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B77A905B-C5BF-470F-B005-568BE79899B7}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B77A905B-C5BF-470F-B005-568BE79899B7}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B77A905B-C5BF-470F-B005-568BE79899B7}.Release|Any CPU.Build.0 = Release|Any CPU
+		{2ADD81B9-3009-42D2-8A81-DF239300FC92}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{2ADD81B9-3009-42D2-8A81-DF239300FC92}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{2ADD81B9-3009-42D2-8A81-DF239300FC92}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{2ADD81B9-3009-42D2-8A81-DF239300FC92}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

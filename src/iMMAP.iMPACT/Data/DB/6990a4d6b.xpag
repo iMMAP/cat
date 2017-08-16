@@ -1,0 +1,293 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<TablePage>
+  <Rows dataType="Xod.PageRow" collType="generic" refType="complex">
+    <Row code="4633a84f0">
+      <ProductApproval>
+        <Id>9c551d4c-9efe-487b-9e5b-3c6b7d0c3710</Id>
+        <ProductVersionId>e7e93919-17f7-4e0a-a778-5dd7fb4246e7</ProductVersionId>
+        <Manager>admin</Manager>
+        <Status>Approved</Status>
+      </ProductApproval>
+    </Row>
+    <Row code="5f6a0626b">
+      <ProductApproval>
+        <Id>6d25a2ee-2c69-4b96-a029-15b5c52edefa</Id>
+        <ProductVersionId>dc5b082b-5de1-4951-afc9-68e8a7dccf64</ProductVersionId>
+        <Manager>admin</Manager>
+        <Status>Approved</Status>
+      </ProductApproval>
+    </Row>
+    <Row code="3ac649f11">
+      <ProductApproval>
+        <Id>83f06a76-2eec-4365-8f44-5b703bdabf7e</Id>
+        <ProductVersionId>5b446382-2a37-42f2-b592-b83842876a80</ProductVersionId>
+        <Manager>admin</Manager>
+        <Status>Approved</Status>
+      </ProductApproval>
+    </Row>
+    <Row code="4e49bb4a5">
+      <ProductApproval>
+        <Id>9ae5db4e-5779-4880-8a9c-08f292dd1317</Id>
+        <ProductVersionId>d39afd49-d708-4781-8aea-4265a5fd14e8</ProductVersionId>
+        <Manager>admin</Manager>
+        <Status>Approved</Status>
+      </ProductApproval>
+    </Row>
+    <Row code="6dcec2eec">
+      <ProductApproval>
+        <Id>61484ee9-3521-4307-bc13-45c7291334d3</Id>
+        <ProductVersionId>16ce74cc-55db-46da-b08e-b82308dcf572</ProductVersionId>
+        <Manager>admin</Manager>
+        <Status>Approved</Status>
+      </ProductApproval>
+    </Row>
+    <Row code="393cb78cf">
+      <ProductApproval>
+        <Id>c1daf160-117c-48cd-9373-6fbb7d7223d3</Id>
+        <ProductVersionId>6214c126-5ab2-47be-9867-f0af3a6a0244</ProductVersionId>
+        <Manager>admin</Manager>
+        <Status>Approved</Status>
+      </ProductApproval>
+    </Row>
+    <Row code="4657b98eb">
+      <ProductApproval>
+        <Id>55abd2e6-ccc2-49e9-99a2-b6542ef63801</Id>
+        <ProductVersionId>12945c1f-7add-4703-8fcb-a2af1099cfc5</ProductVersionId>
+        <Manager>admin</Manager>
+        <Status>Approved</Status>
+      </ProductApproval>
+    </Row>
+    <Row code="27b039b77">
+      <ProductApproval>
+        <Id>03eb909d-a36e-4be7-8717-be62ec04a6f2</Id>
+        <ProductVersionId>eab4365a-86f8-4716-9a11-40a92b9e38ba</ProductVersionId>
+        <Manager>admin</Manager>
+        <Status>Approved</Status>
+      </ProductApproval>
+    </Row>
+    <Row code="01628bdf5">
+      <ProductApproval>
+        <Id>ad77d817-0f62-49bc-926e-63fd3d658dee</Id>
+        <ProductVersionId>880f94a6-b06f-45df-80ba-0c89eef569b1</ProductVersionId>
+        <Manager>admin</Manager>
+        <Status>Approved</Status>
+      </ProductApproval>
+    </Row>
+    <Row code="8aecfbb0d">
+      <ProductApproval>
+        <Id>668a39d4-3dcf-45ca-8ffc-d28c1a501467</Id>
+        <ProductVersionId>0ea05d83-406c-47cb-a3fe-6c410b6faee2</ProductVersionId>
+        <Manager>admin</Manager>
+        <Status>Approved</Status>
+      </ProductApproval>
+    </Row>
+    <Row code="b7b06f468">
+      <ProductApproval>
+        <Id>42dc775a-aa6c-46ea-9a31-dc795cbe2f72</Id>
+        <ProductVersionId>603042c0-30b1-440f-afce-c2b3b76f2589</ProductVersionId>
+        <Manager>admin</Manager>
+        <Status>Approved</Status>
+      </ProductApproval>
+    </Row>
+    <Row code="a35d7522b">
+      <ProductApproval>
+        <Id>d92f3b35-ec8d-48ab-b700-5aec23c0050e</Id>
+        <ProductVersionId>01b755d5-2d0a-4b47-a048-328dc1bc70da</ProductVersionId>
+        <Manager>admin</Manager>
+        <Status>Approved</Status>
+      </ProductApproval>
+    </Row>
+    <Row code="49e07d2f5">
+      <ProductApproval>
+        <Id>ee82933b-51a9-4384-8c55-91d8ca68c5c2</Id>
+        <ProductVersionId>b214acbc-7b40-4c8a-9ef5-996f0277373a</ProductVersionId>
+        <Manager>admin</Manager>
+        <Status>Approved</Status>
+      </ProductApproval>
+    </Row>
+    <Row code="1108c434e">
+      <ProductApproval>
+        <Id>ae27fb61-12df-4825-8d67-7d2e83472784</Id>
+        <ProductVersionId>00b1c191-4705-4e35-a57c-9069bdaa478b</ProductVersionId>
+        <Manager>admin</Manager>
+        <Status>Approved</Status>
+      </ProductApproval>
+    </Row>
+    <Row code="914b6efd5">
+      <ProductApproval>
+        <Id>36164836-55df-47ce-a90a-d24eeee72c03</Id>
+        <ProductVersionId>2690197b-364a-4b11-8bcd-4bfacd1e6d97</ProductVersionId>
+        <Manager>admin</Manager>
+        <Status>Approved</Status>
+      </ProductApproval>
+    </Row>
+    <Row code="4fd753d87">
+      <ProductApproval>
+        <Id>86e59598-c08d-4d41-8092-16ec835b90d8</Id>
+        <ProductVersionId>0938673e-d613-45a3-8e4a-7e3024267f34</ProductVersionId>
+        <Manager>admin</Manager>
+        <Status>Approved</Status>
+      </ProductApproval>
+    </Row>
+    <Row code="1579aebd3">
+      <ProductApproval>
+        <Id>d56ed0db-cd5f-4b8e-a023-6738cc7f591c</Id>
+        <ProductVersionId>b8d66844-f917-4f8a-93a3-95c8cfbee035</ProductVersionId>
+        <Manager>admin</Manager>
+        <Status>Approved</Status>
+      </ProductApproval>
+    </Row>
+    <Row code="051efd215">
+      <ProductApproval>
+        <Id>8e42b065-33eb-47dd-8b51-9839ac1bedde</Id>
+        <ProductVersionId>44b12edc-8b61-4348-bc74-442bf34b6373</ProductVersionId>
+        <Manager>admin</Manager>
+        <Status>Approved</Status>
+      </ProductApproval>
+    </Row>
+    <Row code="574f14080">
+      <ProductApproval>
+        <Id>aa9e2190-d122-45e2-878d-d106a4d0a5eb</Id>
+        <ProductVersionId>e92d931a-ee82-4712-bc49-fa776f684629</ProductVersionId>
+        <Manager>admin</Manager>
+        <Status>Approved</Status>
+      </ProductApproval>
+    </Row>
+    <Row code="d08055fa2">
+      <ProductApproval>
+        <Id>1aec77f3-9ced-4edf-a53b-c41658b0a434</Id>
+        <ProductVersionId>fd7a38b5-e98c-4d1d-b9ba-49cf13dfa344</ProductVersionId>
+        <Manager>admin</Manager>
+        <Status>Approved</Status>
+      </ProductApproval>
+    </Row>
+    <Row code="bdb97df45">
+      <ProductApproval>
+        <Id>7a22e7aa-c884-460d-a227-a70a051643f7</Id>
+        <ProductVersionId>4160f7ca-0560-4ec5-9913-ca0314e390ee</ProductVersionId>
+        <Manager>admin</Manager>
+        <Status>Approved</Status>
+      </ProductApproval>
+    </Row>
+    <Row code="c4b260c5f">
+      <ProductApproval>
+        <Id>b0f9bb83-0d89-4a4b-8239-525d4b07d1b6</Id>
+        <ProductVersionId>a39947a8-8ac6-4d8d-9387-8a5a67db9be5</ProductVersionId>
+        <Manager>admin</Manager>
+        <Status>Approved</Status>
+      </ProductApproval>
+    </Row>
+    <Row code="4bfaf7185">
+      <ProductApproval>
+        <Id>ea081aa8-303b-4c17-ab27-001f43e1f83a</Id>
+        <ProductVersionId>5864c052-622a-43ee-9b44-09b8bde5aae3</ProductVersionId>
+        <Manager>admin</Manager>
+        <Status>Approved</Status>
+      </ProductApproval>
+    </Row>
+    <Row code="f82b31d23">
+      <ProductApproval>
+        <Id>b9735f34-f039-4d4a-8ca6-284405d9a61e</Id>
+        <ProductVersionId>195d6593-e4a4-4fe4-8115-6bf9d7e39a5a</ProductVersionId>
+        <Manager>admin</Manager>
+        <Status>Approved</Status>
+      </ProductApproval>
+    </Row>
+    <Row code="aca9eb99a">
+      <ProductApproval>
+        <Id>dba2870d-7519-4834-8f7a-41a65634a200</Id>
+        <ProductVersionId>d057feac-0e6b-459f-8e7f-81397699bbbc</ProductVersionId>
+        <Manager>admin</Manager>
+        <Status>Approved</Status>
+      </ProductApproval>
+    </Row>
+    <Row code="54184f80c">
+      <ProductApproval>
+        <Id>cd1df03b-b17d-411a-86fc-6a49269c3e74</Id>
+        <ProductVersionId>6b468eae-9cf5-4aa4-b076-b6b57aeb60ae</ProductVersionId>
+        <Manager>admin</Manager>
+        <Status>Approved</Status>
+      </ProductApproval>
+    </Row>
+    <Row code="ec0193d89">
+      <ProductApproval>
+        <Id>acc69efa-a79a-4e6f-82cf-61b92389aab8</Id>
+        <ProductVersionId>4456c89b-0fdb-4995-98e8-82b0eb2d728e</ProductVersionId>
+        <Manager>admin</Manager>
+        <Status>Approved</Status>
+      </ProductApproval>
+    </Row>
+    <Row code="4693b93a5">
+      <ProductApproval>
+        <Id>0ff53f94-392d-45bc-9465-f3f50b13ee37</Id>
+        <ProductVersionId>53e733c5-3fde-443c-b4e2-0f44e51b2614</ProductVersionId>
+        <Manager>admin</Manager>
+        <Status>Approved</Status>
+      </ProductApproval>
+    </Row>
+    <Row code="0b883fe01">
+      <ProductApproval>
+        <Id>6d11b8a0-423e-4c32-a158-8b7a13c460fa</Id>
+        <ProductVersionId>5358c9a6-c9be-4fa6-882d-52843cb0eb7b</ProductVersionId>
+        <Manager>admin</Manager>
+        <Status>Approved</Status>
+      </ProductApproval>
+    </Row>
+    <Row code="1c741174c">
+      <ProductApproval>
+        <Id>2558481f-bf23-422f-81b5-0cc166f171b2</Id>
+        <ProductVersionId>d1d9cdb2-3924-4495-b998-1ec3e63c2256</ProductVersionId>
+        <Manager>admin</Manager>
+        <Status>Approved</Status>
+      </ProductApproval>
+    </Row>
+    <Row code="a79b8b2d2">
+      <ProductApproval>
+        <Id>06890e2e-6e1a-4af7-9714-b5e2625ca376</Id>
+        <ProductVersionId>90a377f2-008a-46c7-ad48-1687edf0b78c</ProductVersionId>
+        <Manager>admin</Manager>
+        <Status>Approved</Status>
+      </ProductApproval>
+    </Row>
+    <Row code="1e8159495">
+      <ProductApproval>
+        <Id>94bc2cfa-0647-4bf5-94f8-747ff170cdba</Id>
+        <ProductVersionId>ac855b82-579d-4ffc-a0cf-48c77cd0e847</ProductVersionId>
+        <Manager>admin</Manager>
+        <Status>Approved</Status>
+      </ProductApproval>
+    </Row>
+    <Row code="b35ed0d65">
+      <ProductApproval>
+        <Id>ab438c1a-5005-4314-881d-14d304edc5ce</Id>
+        <ProductVersionId>dba314c0-09b6-462e-9605-ed8500346b76</ProductVersionId>
+        <Manager>admin</Manager>
+        <Status>Approved</Status>
+      </ProductApproval>
+    </Row>
+    <Row code="0382cf907">
+      <ProductApproval>
+        <Id>32b02191-a802-414a-9059-f20617452dc6</Id>
+        <ProductVersionId>935bd3ff-bb16-486f-b9b3-4621553de342</ProductVersionId>
+        <Manager>admin</Manager>
+        <Status>Approved</Status>
+      </ProductApproval>
+    </Row>
+    <Row code="0a40324a8">
+      <ProductApproval>
+        <Id>4b8bba39-0367-43fa-a460-d3ac99886080</Id>
+        <ProductVersionId>24bbd85f-ecae-438f-b65f-552d3d7fdb50</ProductVersionId>
+        <Manager>admin</Manager>
+        <Status>Approved</Status>
+      </ProductApproval>
+    </Row>
+    <Row code="ff138a51c">
+      <ProductApproval>
+        <Id>b7f83b2c-689c-4eab-92dd-abdb2927296e</Id>
+        <ProductVersionId>5ae64a98-f564-4ae8-97fa-09d45e243f9d</ProductVersionId>
+        <Manager>admin</Manager>
+        <Status>Approved</Status>
+      </ProductApproval>
+    </Row>
+  </Rows>
+</TablePage>

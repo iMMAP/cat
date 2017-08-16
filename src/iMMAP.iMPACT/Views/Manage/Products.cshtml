@@ -1,0 +1,100 @@
+﻿@model iMMAP.iMPACT.Models.ViewModels.ProductsViewModel
+
+<!-- Content Header (Page header) -->
+<section class="content-header">
+    <h1>
+        Products
+        <small>My products explorer</small>
+    </h1>
+    <ol class="breadcrumb">
+        <li><a href="#"><i class="fa fa-dashboard"></i> iMPACT/@@@User.Identity.Name </a></li>
+        <li class="active">Products</li>
+    </ol>
+</section>
+<!-- Main content -->
+<section class="content">
+    <!-- Your Page Content Here -->
+    <!-- products table -->
+    <section class="content">
+        <div class="row">
+            <div class="col-xs-12">
+                <!-- /.box -->
+                <div class="box">
+                    <!-- /.box-header -->
+                    <div class="box-body">
+                        <table id="example1" class="table table-bordered table-striped">
+                            <thead>
+                                <tr>
+                                    <th>Product Name</th>
+                                    <th>Type</th>
+                                    <th>Month</th>
+                                    <th>Created At</th>
+                                    <th>Aproval Status</th>
+                                    <th></th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                @foreach (var p in Model.Products)
+                                {
+                                    <tr>
+                                        <td>@p.Name</td>
+                                        <td>@p.Type</td>
+                                        <td>@p.Month</td>
+                                        <td>@p.Created.ToShortDateString()</td>
+                                        <td>@p.ApprovalStatus</td>
+                                        <td>
+                                            <div class="btn-group">
+                                                <button class="btn btn-sm btn-default" type="button"
+                                                        click="javascript: ajaxCall({url: 'manage/edit', data: { id: '@p.Id' }});">
+                                                    <i class="fa fa-pencil"></i>
+                                                </button>
+                                                <button class="btn btn-sm btn-default" type="button"
+                                                        click="javascript: ajaxCall({url: 'manage/version', data: { id: '@p.Id' }});">
+                                                    <i class="fa fa-clone"></i>
+                                                </button>
+                                                <button class="btn btn-sm btn-default" type="button"
+                                                        click="javascript: ajaxCall({url: 'manage/delete', data: { id: '@p.Id' }, onSuccess: showAlert });">
+                                                    <i class="fa fa-remove"></i>
+                                                </button>
+                                            </div>
+                                        </td>
+                                    </tr>
+                                }
+                            </tbody>
+                            <tfoot>
+                                <tr>
+                                    <th>Rendering engine</th>
+                                    <th>Browser</th>
+                                    <th>Platform(s)</th>
+                                    <th>Engine version</th>
+                                    <th>CSS grade</th>
+                                </tr>
+                            </tfoot>
+                        </table>
+                    </div>
+                    <!-- /.box-body -->
+                </div>
+                <!-- /.box -->
+            </div>
+            <!-- /.col -->
+        </div>
+        <!-- /.row -->
+    </section>
+</section>
+<!-- /.content -->
+<!-- DataTables -->
+@Styles.Render("~/Themes/dashboard/plugins/datatables/dataTables.bootstrap.css")
+@Scripts.Render("~/Themes/dashboard/plugins/datatables/jquery.dataTables.min.js")
+@Scripts.Render("~/Themes/dashboard/plugins/datatables/dataTables.bootstrap.min.js")
+
+<script type="text/javascript">
+    $('#example1').DataTable();
+    //$('#example1').DataTable({
+    //    "paging": true,
+    //    "lengthChange": false,
+    //    "searching": false,
+    //    "ordering": true,
+    //    "info": true,
+    //    "autoWidth": false
+    //});
+</script>

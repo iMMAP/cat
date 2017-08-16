@@ -1,0 +1,14 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<TablePage>
+  <Rows dataType="Xod.PageRow" collType="generic" refType="complex">
+    <Row code="2a465fbdb">
+      <RegionalOffice>
+        <Id>1</Id>
+        <Region>Aden</Region>
+        <Programs dataType="iMMAP.iMPACT.Models.RegionalOfficeProgram" collType="generic" refType="children">
+          <RegionalOfficeProgram Id="1">8b5e781cb.42f3cd85a</RegionalOfficeProgram>
+        </Programs>
+      </RegionalOffice>
+    </Row>
+  </Rows>
+</TablePage>
