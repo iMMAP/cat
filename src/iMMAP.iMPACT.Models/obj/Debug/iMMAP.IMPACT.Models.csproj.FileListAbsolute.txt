@@ -19,3 +19,10 @@ C:\Users\msallam\projects\iMMAP.iMPACT\iMMAP.iMPACT.Models\bin\Debug\Mhsallam.Xo
 C:\Users\msallam\projects\iMMAP.iMPACT\iMMAP.iMPACT.Models\obj\Debug\iMMAP.IMPACT.Models.csprojResolveAssemblyReference.cache
 C:\Users\msallam\projects\iMMAP.iMPACT\iMMAP.iMPACT.Models\obj\Debug\iMMAP.iMPACT.Models.dll
 C:\Users\msallam\projects\iMMAP.iMPACT\iMMAP.iMPACT.Models\obj\Debug\iMMAP.iMPACT.Models.pdb
+P:\iMMAP.iMPACT\src\iMMAP.iMPACT.Models\bin\Debug\iMMAP.iMPACT.Models.dll
+P:\iMMAP.iMPACT\src\iMMAP.iMPACT.Models\bin\Debug\iMMAP.iMPACT.Models.pdb
+P:\iMMAP.iMPACT\src\iMMAP.iMPACT.Models\bin\Debug\Mhsallam.Xod.dll
+P:\iMMAP.iMPACT\src\iMMAP.iMPACT.Models\bin\Debug\Mhsallam.Xod.pdb
+P:\iMMAP.iMPACT\src\iMMAP.iMPACT.Models\obj\Debug\iMMAP.IMPACT.Models.csprojResolveAssemblyReference.cache
+P:\iMMAP.iMPACT\src\iMMAP.iMPACT.Models\obj\Debug\iMMAP.iMPACT.Models.dll
+P:\iMMAP.iMPACT\src\iMMAP.iMPACT.Models\obj\Debug\iMMAP.iMPACT.Models.pdb

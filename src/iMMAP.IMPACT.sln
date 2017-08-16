@@ -11,6 +11,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "iMMAP.IMPACT.Identity", "iM
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "iMMAP.IMPACT.Console", "iMMAP.iMPACT.Console\iMMAP.IMPACT.Console.csproj", "{2ADD81B9-3009-42D2-8A81-DF239300FC92}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "iMMAP.iMPACT.Services", "iMMAP.iMPACT.Services\iMMAP.iMPACT.Services.csproj", "{7BB318E7-7E1E-40A9-9DFB-CDF2D7A7E374}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -33,6 +35,10 @@ Global
 		{2ADD81B9-3009-42D2-8A81-DF239300FC92}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{2ADD81B9-3009-42D2-8A81-DF239300FC92}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{2ADD81B9-3009-42D2-8A81-DF239300FC92}.Release|Any CPU.Build.0 = Release|Any CPU
+		{7BB318E7-7E1E-40A9-9DFB-CDF2D7A7E374}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{7BB318E7-7E1E-40A9-9DFB-CDF2D7A7E374}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{7BB318E7-7E1E-40A9-9DFB-CDF2D7A7E374}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{7BB318E7-7E1E-40A9-9DFB-CDF2D7A7E374}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

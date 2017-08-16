@@ -1,6 +1,6 @@
-﻿using iMMAP.iMPACT.Helpers;
-using iMMAP.iMPACT.Identity;
+﻿using iMMAP.iMPACT.Identity;
 using iMMAP.iMPACT.Models.ViewModels;
+using iMMAP.iMPACT.Services;
 using Microsoft.AspNet.Identity;
 using Microsoft.Owin.Security;
 using System;
@@ -14,25 +14,20 @@ namespace iMMAP.iMPACT.Controllers
 {
     public class AccountController : Controller
     {
+        public IUsersService usersService { get; private set; }
+
         // GET: Account
         public ActionResult Index()
         {
             return View();
         }
 
-        public AccountController()
-            : this(new UserManager<IdentityUser>(new UserStore(IOHelper.GetDatabasePath())))
+        public AccountController(IUsersService usersService)
         {
-        }
-
-        public AccountController(UserManager<IdentityUser> userManager)
-        {
-            UserManager = userManager;
+            this.usersService = usersService;
         }
 
         #region login business logic
-
-        public UserManager<IdentityUser> UserManager { get; private set; }
 
         //
         // GET: /Manage/Login
@@ -53,7 +48,7 @@ namespace iMMAP.iMPACT.Controllers
         {
             if (ModelState.IsValid)
             {
-                var user = await UserManager.FindAsync(model.UserName, model.Password);
+                var user = await usersService.UserManager.FindAsync(model.UserName, model.Password);
                 if (user != null)
                 {
                     await SignInAsync(user, model.RememberMe);
@@ -81,7 +76,7 @@ namespace iMMAP.iMPACT.Controllers
         private async Task SignInAsync(IdentityUser user, bool isPersistent)
         {
             AuthenticationManager.SignOut(DefaultAuthenticationTypes.ExternalCookie);
-            var identity = await UserManager.CreateIdentityAsync(user, DefaultAuthenticationTypes.ApplicationCookie);
+            var identity = await usersService.UserManager.CreateIdentityAsync(user, DefaultAuthenticationTypes.ApplicationCookie);
             AuthenticationManager.SignIn(new AuthenticationProperties() { IsPersistent = isPersistent }, identity);
         }
 

@@ -1,0 +1,13 @@
+P:\iMMAP.iMPACT\src\iMMAP.iMPACT.Services\obj\Debug\iMMAP.iMPACT.Services.csprojResolveAssemblyReference.cache
+P:\iMMAP.iMPACT\src\iMMAP.iMPACT.Services\bin\Debug\iMMAP.iMPACT.Services.dll
+P:\iMMAP.iMPACT\src\iMMAP.iMPACT.Services\bin\Debug\iMMAP.iMPACT.Services.pdb
+P:\iMMAP.iMPACT\src\iMMAP.iMPACT.Services\bin\Debug\iMMAP.iMPACT.Identity.dll
+P:\iMMAP.iMPACT\src\iMMAP.iMPACT.Services\bin\Debug\iMMAP.iMPACT.Models.dll
+P:\iMMAP.iMPACT\src\iMMAP.iMPACT.Services\bin\Debug\Mhsallam.Xod.dll
+P:\iMMAP.iMPACT\src\iMMAP.iMPACT.Services\bin\Debug\Microsoft.AspNet.Identity.Core.dll
+P:\iMMAP.iMPACT\src\iMMAP.iMPACT.Services\bin\Debug\iMMAP.iMPACT.Identity.pdb
+P:\iMMAP.iMPACT\src\iMMAP.iMPACT.Services\bin\Debug\iMMAP.iMPACT.Models.pdb
+P:\iMMAP.iMPACT\src\iMMAP.iMPACT.Services\bin\Debug\Mhsallam.Xod.pdb
+P:\iMMAP.iMPACT\src\iMMAP.iMPACT.Services\bin\Debug\Microsoft.AspNet.Identity.Core.xml
+P:\iMMAP.iMPACT\src\iMMAP.iMPACT.Services\obj\Debug\iMMAP.iMPACT.Services.dll
+P:\iMMAP.iMPACT\src\iMMAP.iMPACT.Services\obj\Debug\iMMAP.iMPACT.Services.pdb

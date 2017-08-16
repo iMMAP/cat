@@ -1,5 +1,4 @@
-﻿using iMMAP.iMPACT.Helpers;
-using iMMAP.iMPACT.Identity;
+﻿using iMMAP.iMPACT.Identity;
 using iMMAP.iMPACT.Models.ViewModels;
 using Microsoft.AspNet.Identity;
 using Microsoft.Owin.Security;

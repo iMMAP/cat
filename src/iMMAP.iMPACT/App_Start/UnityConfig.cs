@@ -14,10 +14,13 @@ namespace iMMAP.iMPACT
             // register all your components with the container here
             // it is NOT necessary to register your controllers
 
-            container.RegisterType<IUsersDataService, UsersDataService>();
             container.RegisterType<IDataService, DataService>();
-            container.RegisterType<INotificationService, NotificationService>();
+            container.RegisterType<IUsersDataService, UsersDataService>();
+            container.RegisterType<IUsersService, UsersService>();
+            container.RegisterType<IMessagesService, MessagesService>();
             container.RegisterType<IProductsService, ProductsService>();
+            container.RegisterType<IActivitiesService, ActivitiesService>();
+            container.RegisterType<IProgramsService, ProgramsService>();
 
             DependencyResolver.SetResolver(new UnityDependencyResolver(container));
         }

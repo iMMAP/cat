@@ -1,11 +1,4 @@
-﻿using iMMAP.iMPACT.Helpers;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace iMMAP.iMPACT.Services
+﻿namespace iMMAP.iMPACT.Services
 {
     public interface IDataService
     {
@@ -23,7 +16,7 @@ namespace iMMAP.iMPACT.Services
 
         public DataService()
         {
-            this.Data = new Xod.XodContext(IOHelper.GetDatabasePath());
+            this.Data = new Xod.XodContext(Helpers.IOHelper.GetDatabasePath());
         }
     }
 
@@ -33,7 +26,7 @@ namespace iMMAP.iMPACT.Services
 
         public UsersDataService()
         {
-            this.Data = new Xod.XodContext(IOHelper.GetUsersDatabasePath());
+            this.Data = new Xod.XodContext(Helpers.IOHelper.GetUsersDatabasePath());
         }
     }
 }
