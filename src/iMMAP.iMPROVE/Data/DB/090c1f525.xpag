@@ -1,0 +1,39 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<TablePage>
+  <Rows dataType="Xod.PageRow" collType="generic" refType="complex">
+    <Row code="599c136e6">
+      <ProductVersion>
+        <Id>5c6f15eb-d33b-4b63-a84a-9c0086d5da84</Id>
+        <SerialNumber>1</SerialNumber>
+        <Date>2017-12-02T02:45:32.4913323+03:00</Date>
+        <Description>Initial product version...</Description>
+        <ApprovalBy>manager</ApprovalBy>
+        <ApprovalStatus>Approved</ApprovalStatus>
+        <ApprovalDate>2017-12-05T02:45:32.4913323+03:00</ApprovalDate>
+        <ProductId>9bcc0a4a-e61b-4516-9b0e-002c0967d084</ProductId>
+        <Product refType="parent" hostProp="Versions" Id="9bcc0a4a-e61b-4516-9b0e-002c0967d084">5c16ff391.cefa5009a</Product>
+      </ProductVersion>
+    </Row>
+    <Row code="4b883b89d">
+      <ProductVersion>
+        <Id>cb3af23f-e920-46d2-a71e-d9ce8b163f50</Id>
+        <SerialNumber>2</SerialNumber>
+        <Changes>MajorDesign</Changes>
+        <Date>2017-12-03T02:45:32.4923354+03:00</Date>
+        <Description>Major update in map design</Description>
+        <ProductId>9bcc0a4a-e61b-4516-9b0e-002c0967d084</ProductId>
+        <Product refType="parent" hostProp="Versions" Id="9bcc0a4a-e61b-4516-9b0e-002c0967d084">5c16ff391.cefa5009a</Product>
+      </ProductVersion>
+    </Row>
+    <Row code="3a6cae412">
+      <ProductVersion>
+        <Id>e44aa10a-e889-451e-b2af-46ea6505eac1</Id>
+        <SerialNumber>3</SerialNumber>
+        <Date>2017-12-06T11:54:41.3517647+03:00</Date>
+        <Description>Check this and that...</Description>
+        <ProductId>526186dc-8bb3-4d55-82de-efae7f9331bc</ProductId>
+        <Product refType="parent" Id="526186dc-8bb3-4d55-82de-efae7f9331bc">5c16ff391.c7942e625</Product>
+      </ProductVersion>
+    </Row>
+  </Rows>
+</TablePage>

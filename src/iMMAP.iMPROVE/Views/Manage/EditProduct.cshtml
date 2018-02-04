@@ -1,0 +1,269 @@
+﻿@model iMMAP.iMPROVE.Models.ViewModels.EditProductViewModel
+
+@{
+    Layout = "~/Views/Shared/_Dashboard.cshtml";
+    var productTypePathName = Model.Product.Type != iMMAP.iMPROVE.Models.ProductType.Other ? Model.Product.Type.ToString() : "Product";
+}
+
+<section id="view-container">
+
+    <script type="text/javascript">
+        function refreshProductVersions() {
+            showSpin($('#product-versions'));
+            var productId = '@Model.Product.Id';
+            if (productId) {
+                ajaxCall({
+                    url: '/manage/productversions?id=' + productId,
+                    onSuccess: function (data) {
+                        $('#product-versions').html(data);
+                    }
+                })
+            }
+        }
+    </script>
+
+    <!-- Content Header (Page header) -->
+    <section class="content-header">
+        <h1>
+            Edit Product
+            <small>@Model.Product.Name</small>
+        </h1>
+        <ol class="breadcrumb">
+            <li><a href="#"><i class="fa fa-dashboard"></i> iMPROVE/@@@User.Identity.Name </a></li>
+            <li><a href="/manage/products">Products</a></li>
+            <li>Edit @productTypePathName</li>
+            <li class="active">@Model.Product.Name</li>
+        </ol>
+    </section>
+
+    <!-- Main content -->
+    <section class="content container-fluid">
+        <div class="col-md-5">
+            <div class="box box-primary">
+                <div class="box-header with-border">
+                    <h3 class="box-title">Product Information</h3>
+                </div>
+                <!-- /.box-header -->
+                <!-- form start -->
+                @using (Ajax.BeginForm("SaveProduct", "Manage",
+new AjaxOptions() { HttpMethod = "POST", OnSuccess = "ajaxMessage", OnFailure = "ajaxMessage" },
+new { id = "form-edit-product", role = "form" }))
+                {
+                    @Html.ValidationSummary(true)
+
+                    <div class="box-body">
+                        <div class="form-group">
+                            @Html.LabelFor(model => model.Product.Name)
+                            @Html.TextBoxFor(model => model.Product.Name, new { @class = "form-control", placeholder = "Product Name" })
+                            @Html.ValidationMessageFor(model => model.Product.Name)
+                        </div>
+
+                        <div class="form-group">
+                            @Html.LabelFor(model => model.Product.Type)
+                            <div class="input-group">
+                                <div class="input-group-addon">
+                                    <i class="fa fa-cube"></i>
+                                </div>
+                                @Html.DropDownList("Type", null, new { @class = "form-control", id = "Product_Type", name = "Product.Type" })
+                            </div>
+                            @Html.ValidationMessageFor(model => model.Product.Type)
+                            <!-- /.input group -->
+                        </div>
+
+                        <div class="form-group">
+                            @Html.LabelFor(model => model.Product.Description)
+                            @Html.TextAreaFor(model => model.Product.Description, new { @class = "form-control", placeholder = "Description...", row = "3" })
+                            @Html.ValidationMessageFor(model => model.Product.Description)
+                        </div>
+
+                        <div class="form-group">
+                            @Html.LabelFor(model => model.Product.Created)
+                            <div class="input-group">
+                                <div class="input-group-addon">
+                                    <i class="fa fa-calendar"></i>
+                                </div>
+                                @Html.TextBoxFor(model => model.Product.Created, new { @class = "form-control focus.inputmask", type = "text", data_mask = "", data_inputmask = "'alias': 'mm/dd/yyyy'" })
+                            </div>
+                            @Html.ValidationMessageFor(model => model.Product.Created)
+                            <!-- /.input group -->
+                        </div>
+
+                        <div class="form-group">
+                            @Html.LabelFor(model => model.Product.Month)
+                            <div class="input-group">
+                                <div class="input-group-addon">
+                                    <i class="fa fa-calendar"></i>
+                                </div>
+                                @Html.DropDownList("Month", null, new { @class = "form-control select2", id = "Product_Month", name = "Product.Month", style = "width: 100%;" })
+                            </div>
+                            @Html.ValidationMessageFor(model => model.Product.Month)
+                            <!-- /.input group -->
+                        </div>
+
+                        <div class="form-group">
+                            @Html.LabelFor(model => model.Product.ProgramId)
+                            <div class="input-group">
+                                <div class="input-group-addon">
+                                    <i class="fa fa-calendar"></i>
+                                </div>
+                                @Html.DropDownList("ProgramId", null, new { @class = "form-control select2", id = "Product_ProgramId", name = "Product.ProgramId", style = "width: 100%;" })
+                            </div>
+                            @Html.ValidationMessageFor(model => model.Product.ProgramId)
+                            <!-- /.input group -->
+                        </div>
+
+                        <div class="form-group">
+                            @Html.LabelFor(model => model.Product.ReferenceThematic)
+                            <div class="input-group">
+                                <div class="input-group-addon">
+                                    <i class="fa fa-tint"></i>
+                                </div>
+                                @Html.DropDownList("ReferenceThematic", null, new { @class = "form-control", id = "Product_ReferenceThematic", name = "Product.ReferenceThematic" })
+                            </div>
+                            @Html.ValidationMessageFor(model => model.Product.ReferenceThematic)
+                            <!-- /.input group -->
+                        </div>
+
+                        <div class="form-group">
+                            @Html.LabelFor(model => model.Product.Level)
+                            <div class="input-group">
+                                <div class="input-group-addon">
+                                    <i class="fa fa-map-marker"></i>
+                                </div>
+                                @Html.DropDownList("Level", null, new { @class = "form-control", id = "Product_Level", name = "Product.Level" })
+                            </div>
+                            @Html.ValidationMessageFor(model => model.Product.Level)
+                            <!-- /.input group -->
+                        </div>
+
+                        <div class="form-group">
+                            @Html.LabelFor(model => model.Product.Governorates)
+                            @Html.TextBoxFor(model => model.Product.Governorates, new { @class = "form-control" })
+                            @Html.ValidationMessageFor(model => model.Product.Governorates)
+                        </div>
+
+                        <div class="form-group">
+                            @Html.LabelFor(model => model.Product.Districts)
+                            @Html.TextBoxFor(model => model.Product.Districts, new { @class = "form-control" })
+                            @Html.ValidationMessageFor(model => model.Product.Districts)
+                        </div>
+
+                        <div class="form-group">
+                            @Html.CheckBoxFor(model => model.Product.Public)
+                            @Html.LabelFor(model => model.Product.Public)
+                        </div>
+
+                        <div class="form-group">
+                            @Html.CheckBoxFor(model => model.Product.Published)
+                            @Html.LabelFor(model => model.Product.Published)
+                        </div>
+
+                        <div class="form-group">
+                            @Html.LabelFor(model => model.Product.Tags)
+                            @Html.TextBoxFor(model => model.Product.Tags, new { @class = "form-control" })
+                            @Html.ValidationMessageFor(model => model.Product.Tags)
+                        </div>
+
+                        <div class="form-group">
+                            <label for="ProductFile">Preview</label>
+                            <input type="file" id="Preview">
+                            <p class="help-block">Please attach 64x64 preview image for your product</p>
+                        </div>
+
+                    </div>
+            <!-- /.box-body -->
+
+                    @Html.HiddenFor(model => model.Product.Id)
+                    @Html.HiddenFor(model => model.EditMode)
+
+                    <div class="box-footer">
+                        <button class="btn btn-primary" type="submit">Save</button>
+                    </div>
+                }
+
+            </div>
+        </div>
+        <div class="col-md-7">
+            <div class="row">
+                <div class="box box-warning">
+                    <div class="box-header with-border">
+                        <h3 class="box-title">Program Information</h3>
+                    </div>
+                    <!-- /.box-header -->
+                    <div class="box-body">
+                        <div class="col-md-4">
+                            <strong><i class="fa fa-building margin-r-5"></i> Regional Office</strong>
+                            <address class="text-muted">
+                                <b>Organization:</b> @Model.Office.Organization<br />
+                                <b>Country:</b> @Model.Office.Country<br />
+                                <b>Region:</b> @Model.Office.Region<br />
+                                Phone: @Model.Office.Phone<br />
+                                Email: @Model.Office.Email
+                            </address>
+                        </div>
+                        <div class="col-md-4">
+                            <strong><i class="fa fa-map-marker margin-r-5"></i> Program</strong>
+                            <address class="text-muted">
+                                Name: <span id="prog-name"></span><br />
+                                Officer: <span id="prog-officer"></span><br />
+                                Email: <span id="prog-officer-email"></span><br />
+                                Phone: <span id="prog-officer-phone"></span>
+                            </address>
+                        </div>
+                        <div class="col-md-4">
+                            <strong><i class="fa fa-user margin-r-5"></i> IMO</strong>
+                            <address class="text-muted">
+                                Name: @Model.CreatedBy.FullName<br />
+                                UserName: @Model.CreatedBy.UserName<br />
+                                Email: @Model.CreatedBy.Email<br />
+                                Phone: @Model.CreatedBy.Phone
+                            </address>
+                        </div>
+                    </div>
+                    <!-- /.box-body -->
+                </div>
+            </div>
+            <div class="row">
+
+                @Html.Partial("_AddProductVersion", new iMMAP.iMPROVE.Models.ViewModels.ProductVersionViewModel() { ProductId = Model.Product.Id })
+
+            </div>
+            <div id="product-versions" class="row">
+
+            </div>
+        </div>
+    </section>
+    <!-- /.content -->
+    <!-- select2 -->
+
+    @section prestyles {
+        @Styles.Render("~/bundles/plugincss/select2")
+    }
+
+    @section postscripts {
+        @Scripts.Render("~/bundles/pluginjs/select2")
+        @Scripts.Render("~/bundles/pluginjs/input-mask")
+
+        <script type="text/javascript">
+            //Initialize Select2 Elements
+            $(".select2").select2();
+
+            //Datemask dd/mm/yyyy
+            $("[data-mask]").inputmask("dd/mm/yyyy", { "placeholder": "dd/mm/yyyy" });
+
+            $("#Product_ProgramId").on("change", function () {
+                console.log($(this).val());
+            });
+
+            $('form select').attr('name', function () {
+                return $(this).attr('id').replace('_', '.')
+            });
+
+            refreshProductVersions();
+        </script>
+    }
+</section>
+
+@section SideMenu {
+    @Html.Partial("~/Views/Manage/_SideMenu.cshtml")
+}

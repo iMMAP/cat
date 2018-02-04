@@ -1,6 +1,0 @@
-D:\work\projects\github\xod\src\bin\Release\Mhsallam.Xod.xml
-D:\work\projects\github\xod\src\bin\Release\Mhsallam.Xod.dll
-D:\work\projects\github\xod\src\bin\Release\Mhsallam.Xod.pdb
-D:\work\projects\github\xod\src\obj\Release\Xod.csprojResolveAssemblyReference.cache
-D:\work\projects\github\xod\src\obj\Release\Mhsallam.Xod.dll
-D:\work\projects\github\xod\src\obj\Release\Mhsallam.Xod.pdb

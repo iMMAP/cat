@@ -1,0 +1,23 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<TablePage>
+  <Rows dataType="Xod.PageRow" collType="generic" refType="complex">
+    <Row code="e8851e1bb">
+      <IdentityRole>
+        <Id>admin</Id>
+        <Name>Administrator</Name>
+      </IdentityRole>
+    </Row>
+    <Row code="1b2664aa3">
+      <IdentityRole>
+        <Id>manager</Id>
+        <Name>Manager</Name>
+      </IdentityRole>
+    </Row>
+    <Row code="810c8f947">
+      <IdentityRole>
+        <Id>user</Id>
+        <Name>User</Name>
+      </IdentityRole>
+    </Row>
+  </Rows>
+</TablePage>

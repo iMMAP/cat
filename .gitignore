@@ -4,5 +4,4 @@ src/bin/
 src/lib/
 src/*.nuspec
 src/*.nupkg
-tmp/
-design/
+res/

@@ -1,0 +1,77 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<TablePage>
+  <Rows dataType="Xod.PageRow" collType="generic" refType="complex">
+    <Row code="5c6f36edf">
+      <Notification>
+        <Id>bfaa044b-09d5-4280-b175-817520adf4ee</Id>
+        <Body>@msallam created a new Map product (Map Product)</Body>
+        <InboxUserId>manager</InboxUserId>
+        <Sent>2017-12-05T02:45:32.5555037+03:00</Sent>
+      </Notification>
+    </Row>
+    <Row code="7ebc621d0">
+      <Notification>
+        <Id>5621f588-46ed-496f-bbd3-7a992417ced8</Id>
+        <Body>@msallam created a new Map product (Map Product)</Body>
+        <InboxUserId>admin</InboxUserId>
+        <Sent>2017-12-05T02:45:32.5555037+03:00</Sent>
+      </Notification>
+    </Row>
+    <Row code="f8a8d54ed">
+      <Notification>
+        <Id>e9999cad-6790-498d-b480-a8ea498d67bb</Id>
+        <Body>@msallam created a new Map product (Map Product)</Body>
+        <InboxUserId>msallam</InboxUserId>
+        <Sent>2017-12-05T02:45:32.5555037+03:00</Sent>
+      </Notification>
+    </Row>
+    <Row code="2d884cfea">
+      <Notification>
+        <Id>748ac13a-d143-4d18-b9ce-2a25212f35f6</Id>
+        <Body>@msallam created a new Map product (Cholera AWD Activities Map Nov 2017)</Body>
+        <InboxUserId>manager</InboxUserId>
+        <Sent>2017-12-06T11:41:47.3706801+03:00</Sent>
+      </Notification>
+    </Row>
+    <Row code="326aa0911">
+      <Notification>
+        <Id>e311cd8e-c075-4123-9299-7c97a233db0e</Id>
+        <Body>@msallam created a new Map product (Cholera AWD Activities Map Nov 2017)</Body>
+        <InboxUserId>admin</InboxUserId>
+        <Sent>2017-12-06T11:41:47.3706801+03:00</Sent>
+      </Notification>
+    </Row>
+    <Row code="e8c7b0c7c">
+      <Notification>
+        <Id>043e7cc5-7116-4577-913e-10546bbf2d4e</Id>
+        <Body>@msallam created a new Map product (Cholera AWD Activities Map Nov 2017)</Body>
+        <InboxUserId>msallam</InboxUserId>
+        <Sent>2017-12-06T11:41:47.3706801+03:00</Sent>
+      </Notification>
+    </Row>
+    <Row code="257e93887">
+      <Notification>
+        <Id>11b5738c-ab2e-48d8-848a-1e6d691b582a</Id>
+        <Body>@msallam added a new Map product version for (Cholera AWD Activities Map Nov 2017)</Body>
+        <InboxUserId>manager</InboxUserId>
+        <Sent>2017-12-06T11:54:41.4951416+03:00</Sent>
+      </Notification>
+    </Row>
+    <Row code="0477bddd3">
+      <Notification>
+        <Id>a7b31af6-5f2e-4f42-bcdb-2ecb246c0d28</Id>
+        <Body>@msallam added a new Map product version for (Cholera AWD Activities Map Nov 2017)</Body>
+        <InboxUserId>admin</InboxUserId>
+        <Sent>2017-12-06T11:54:41.4951416+03:00</Sent>
+      </Notification>
+    </Row>
+    <Row code="1066a7181">
+      <Notification>
+        <Id>98d54130-9dce-46b6-99ae-d876627a1126</Id>
+        <Body>@msallam added a new Map product version for (Cholera AWD Activities Map Nov 2017)</Body>
+        <InboxUserId>msallam</InboxUserId>
+        <Sent>2017-12-06T11:54:41.4951416+03:00</Sent>
+      </Notification>
+    </Row>
+  </Rows>
+</TablePage>

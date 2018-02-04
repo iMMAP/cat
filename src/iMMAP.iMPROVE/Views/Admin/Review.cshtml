@@ -1,0 +1,152 @@
+﻿@model iMMAP.iMPROVE.Models.ViewModels.ReviewProductViewModel
+
+@{
+    Layout = "~/Views/Shared/_Dashboard.cshtml";
+    var productTypePathName = Model.Product.Type != iMMAP.iMPROVE.Models.ProductType.Other ? Model.Product.Type.ToString() : "Product";
+}
+
+<section id="view-container">
+
+    <script type="text/javascript">
+        function refreshProductVersions() {
+            showSpin($('#product-versions'));
+            var productId = '@Model.Product.Id';
+            if (productId) {
+                ajaxCall({
+                    url: '/manage/productversions?id=' + productId,
+                    onSuccess: function (data) {
+                        $('#product-versions').html(data);
+                    }
+                })
+            }
+        }
+
+        function changeApproval(id, status, comments) {
+            ajaxCall({});
+        }
+    </script>
+
+    <!-- Content Header (Page header) -->
+    <section class="content-header">
+        <h1>
+            Review Product
+            <small>@Model.Product.Name</small>
+        </h1>
+        <ol class="breadcrumb">
+            <li><a href="#"><i class="fa fa-dashboard"></i> iMPROVE/@@@User.Identity.Name </a></li>
+            <li><a href="/manage/products">Products</a></li>
+            <li>Edit @productTypePathName</li>
+            <li class="active">@Model.Product.Name</li>
+        </ol>
+    </section>
+
+    <!-- Main content -->
+    <section class="content container-fluid">
+        <div class="row">
+            <div class="col-md-5">
+                <div class="box box-warning">
+                    <div class="box-header with-border">
+                        <h3 class="box-title">Product Details</h3>
+                    </div>
+                    <!-- /.box-header -->
+                    <div class="box-body">
+                        <strong> Name</strong>
+                        <p>@Model.Product.Name</p>
+                        <address class="text-muted">
+                            <b>Type:</b> @Model.Product.Type<br />
+                            <b>Creation Date:</b> @Model.Product.Created<br />
+                            <b>Target Month:</b> @Model.Product.Month<br />
+                            <b>Created By:</b> @Model.Product.CreatedBy<br />
+
+                            <b>Description:</b> <br />
+                            @Model.Product.Description
+
+                            <b>Thematic: </b> @Model.Product.ReferenceThematic<br />
+                            <b>Level: </b> @Model.Product.Level<br />
+                            <b>Governorate: </b> @Model.Product.Governorates<br />
+                            <b>Districts: </b> @Model.Product.Districts<br />
+                        </address>
+                    </div>
+                    <!-- /.box-body -->
+                </div>
+
+                <div class="box box-warning">
+                    <div class="box-header with-border">
+                        <h3 class="box-title">Program Information</h3>
+                    </div>
+                    <!-- /.box-header -->
+                    <div class="box-body">
+                        <div class="col-md-4">
+                            <strong><i class="fa fa-building margin-r-5"></i> Regional Office</strong>
+                            <address class="text-muted">
+                                <b>Organization:</b> @Model.Office.Organization<br />
+                                <b>Country:</b> @Model.Office.Country<br />
+                                <b>Region:</b> @Model.Office.Region<br />
+                                Phone: @Model.Office.Phone<br />
+                                Email: @Model.Office.Email
+                            </address>
+                        </div>
+                        <div class="col-md-4">
+                            <strong><i class="fa fa-map-marker margin-r-5"></i> Program</strong>
+                            <address class="text-muted">
+                                Name: <span id="prog-name"></span><br />
+                                Officer: <span id="prog-officer"></span><br />
+                                Email: <span id="prog-officer-email"></span><br />
+                                Phone: <span id="prog-officer-phone"></span>
+                            </address>
+                        </div>
+                        <div class="col-md-4">
+                            <strong><i class="fa fa-user margin-r-5"></i> IMO</strong>
+                            <address class="text-muted">
+                                Name: @Model.CreatedBy.FullName<br />
+                                UserName: @Model.CreatedBy.UserName<br />
+                                Email: @Model.CreatedBy.Email<br />
+                                Phone: @Model.CreatedBy.Phone
+                            </address>
+                        </div>
+                    </div>
+                    <!-- /.box-body -->
+                </div>
+            </div>
+
+            <div class="col-md-7">
+                <div id="product-versions" class="row">
+
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- /.content -->
+    <!-- select2 -->
+
+    @section prestyles {
+        @Styles.Render("~/bundles/plugincss/select2")
+    }
+
+    @section postscripts {
+        @Scripts.Render("~/bundles/pluginjs/select2")
+        @Scripts.Render("~/bundles/pluginjs/input-mask")
+
+        <script type="text/javascript">
+            //Initialize Select2 Elements
+            $(".select2").select2();
+
+            //Datemask dd/mm/yyyy
+            $("[data-mask]").inputmask("dd/mm/yyyy", { "placeholder": "dd/mm/yyyy" });
+
+            $("#Product_ProgramId").on("change", function () {
+                console.log($(this).val());
+            });
+
+            $('form select').attr('name', function () {
+                return $(this).attr('id').replace('_', '.')
+            });
+
+            refreshProductVersions();
+        </script>
+    }
+</section>
+
+@section SideMenu {
+    @Html.Partial("~/Views/Manage/_SideMenu.cshtml")
+}

@@ -1,0 +1,17 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<TablePage>
+  <Rows dataType="Xod.PageRow" collType="generic" refType="complex">
+    <Row code="e21cf56bc">
+      <RegionalOffice>
+        <Id>5cb598cc-26eb-43eb-95b8-621234c5b032</Id>
+        <Country>Yemen</Country>
+        <Region>Aden</Region>
+        <Email>office@org.com</Email>
+        <Phone>2983742</Phone>
+        <Programs dataType="iMMAP.iMPROVE.Models.RegionalOfficeProgram" collType="generic" refType="children">
+          <RegionalOfficeProgram Id="4f7491ab-9223-4473-a0f5-1190a9c26b74">2818ebe3b.38d7a7e79</RegionalOfficeProgram>
+        </Programs>
+      </RegionalOffice>
+    </Row>
+  </Rows>
+</TablePage>

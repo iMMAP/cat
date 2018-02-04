@@ -1,0 +1,55 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 15
+VisualStudioVersion = 15.0.27004.2002
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "iMMAP.iMPROVE", "iMMAP.iMPROVE\iMMAP.iMPROVE.csproj", "{51C8706A-75F8-49C9-AD0B-CA4224AFB5DC}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "iMMAP.iMPROVE.Models", "iMMAP.iMPROVE.Models\iMMAP.iMPROVE.Models.csproj", "{1E5E91F8-23D4-4619-B879-0BF95FDB0A65}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "iMMAP.iMPROVE.Identity", "iMMAP.iMPROVE.Identity\iMMAP.iMPROVE.Identity.csproj", "{B77A905B-C5BF-470F-B005-568BE79899B7}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "iMMAP.iMPROVE.Console", "iMMAP.iMPROVE.Console\iMMAP.iMPROVE.Console.csproj", "{2ADD81B9-3009-42D2-8A81-DF239300FC92}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "iMMAP.iMPROVE.Core", "iMMAP.iMPROVE.Core\iMMAP.iMPROVE.Core.csproj", "{7BB318E7-7E1E-40A9-9DFB-CDF2D7A7E374}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Xod", "D:\repos\xod\src\Xod.csproj", "{0A630877-727F-47C2-9A66-AFDE59419C6A}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{51C8706A-75F8-49C9-AD0B-CA4224AFB5DC}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{51C8706A-75F8-49C9-AD0B-CA4224AFB5DC}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{51C8706A-75F8-49C9-AD0B-CA4224AFB5DC}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{51C8706A-75F8-49C9-AD0B-CA4224AFB5DC}.Release|Any CPU.Build.0 = Release|Any CPU
+		{1E5E91F8-23D4-4619-B879-0BF95FDB0A65}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{1E5E91F8-23D4-4619-B879-0BF95FDB0A65}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{1E5E91F8-23D4-4619-B879-0BF95FDB0A65}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{1E5E91F8-23D4-4619-B879-0BF95FDB0A65}.Release|Any CPU.Build.0 = Release|Any CPU
+		{B77A905B-C5BF-470F-B005-568BE79899B7}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B77A905B-C5BF-470F-B005-568BE79899B7}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B77A905B-C5BF-470F-B005-568BE79899B7}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B77A905B-C5BF-470F-B005-568BE79899B7}.Release|Any CPU.Build.0 = Release|Any CPU
+		{2ADD81B9-3009-42D2-8A81-DF239300FC92}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{2ADD81B9-3009-42D2-8A81-DF239300FC92}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{2ADD81B9-3009-42D2-8A81-DF239300FC92}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{2ADD81B9-3009-42D2-8A81-DF239300FC92}.Release|Any CPU.Build.0 = Release|Any CPU
+		{7BB318E7-7E1E-40A9-9DFB-CDF2D7A7E374}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{7BB318E7-7E1E-40A9-9DFB-CDF2D7A7E374}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{7BB318E7-7E1E-40A9-9DFB-CDF2D7A7E374}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{7BB318E7-7E1E-40A9-9DFB-CDF2D7A7E374}.Release|Any CPU.Build.0 = Release|Any CPU
+		{0A630877-727F-47C2-9A66-AFDE59419C6A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{0A630877-727F-47C2-9A66-AFDE59419C6A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{0A630877-727F-47C2-9A66-AFDE59419C6A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{0A630877-727F-47C2-9A66-AFDE59419C6A}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {2E34A64A-3E1F-4E63-97E2-17FB4DDA6944}
+	EndGlobalSection
+EndGlobal

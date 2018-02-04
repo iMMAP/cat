@@ -1,0 +1,89 @@
+﻿@{
+    Layout = "~/Views/Shared/_Dashboard.cshtml";
+}
+
+<!-- DataTables -->
+@section prestyles {
+    @Styles.Render("~/bundles/plugincss/datatables")
+}
+
+@section postscripts {
+    @Scripts.Render("~/bundles/pluginjs/datatables")
+}
+
+
+<section id="view-container">
+
+    <script type="text/javascript">
+        function refreshNotifications() {
+            //showSpin($('#table-versions'));
+            ajaxCall({
+                url: '/manage/notificationstable',
+                onSuccess: function (data) {
+                    console.log();
+                    $('#notifications-container').html(data);
+                    $('#table-notifications').DataTable(
+                        {
+                            "columnDefs": [{
+                                "targets": 1,
+                                "width": "20%"
+                            }, {
+                                "targets": [2, 3],
+                                "orderable": false,
+                                "searchable": false,
+                                "width": "10%"
+                            }]
+                        });
+                }
+            })
+        }
+    </script>
+
+    <!-- Content Header (Page header) -->
+    <section class="content-header">
+        <h1>
+            Notifications
+            <small>Auto-generated notifications inbox</small>
+        </h1>
+        <ol class="breadcrumb">
+            <li><a href="#"><i class="fa fa-dashboard"></i> iMPROVE/@@@User.Identity.Name </a></li>
+            <li class="active">Notifications</li>
+        </ol>
+    </section>
+    <!-- Main content -->
+    <!-- products table -->
+    <section class="content">
+        <div class="row">
+            <div class="col-xs-12">
+                <!-- /.box -->
+                <div class="box box-primary">
+                    <!-- /.box-header -->
+                    <div class="box-header">
+                        <h3 class="box-title">Notifications Table</h3>
+                    </div>
+
+                    <div class="box-body">
+                        <div id="notifications-container">
+
+                        </div>
+                    </div>
+                    <!-- /.box-body -->
+                </div>
+                <!-- /.box -->
+            </div>
+            <!-- /.col -->
+        </div>
+        <!-- /.row -->
+    </section>
+    <!-- /.content -->
+
+    }
+
+    <script type="text/javascript">
+        refreshNotifications();
+    </script>
+</section>
+
+@section SideMenu {
+    @Html.Partial("~/Views/Manage/_SideMenu.cshtml")
+}

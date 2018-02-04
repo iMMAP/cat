@@ -1,0 +1,44 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<TablePage>
+  <Rows dataType="Xod.PageRow" collType="generic" refType="complex">
+    <Row code="1445a526b">
+      <IdentityUser>
+        <Id>e78cfc65-c10a-42c4-ae84-501d6dfb13b5</Id>
+        <UserName>msallam</UserName>
+        <PasswordHash>AOeXlapi1/Po5/qOyvEi999ZJt73F5V51Qbz6awKHHYBxuGaKS0tLcDgKMMyxmdLNA==</PasswordHash>
+        <Email>msallam@immap.org</Email>
+        <FullName>Mohammed H. Sallam</FullName>
+        <OfficeId>5cb598cc-26eb-43eb-95b8-621234c5b032</OfficeId>
+        <Roles dataType="System.String" collType="generic">
+          <String>user</String>
+        </Roles>
+      </IdentityUser>
+    </Row>
+    <Row code="61f8d9926">
+      <IdentityUser>
+        <Id>c34f5ca5-bc92-4f30-97eb-93f3b4d75c71</Id>
+        <UserName>manager</UserName>
+        <PasswordHash>AHT9TdB8zKeZyRetn9ve6TqIl3ni5Rh8Ph8pjl89bnzv7ocuV/JJpnnN9XWftA5qPw==</PasswordHash>
+        <Email>manager@immap.org</Email>
+        <FullName>Manager</FullName>
+        <Type>Manager</Type>
+        <Roles dataType="System.String" collType="generic">
+          <String>manager</String>
+        </Roles>
+      </IdentityUser>
+    </Row>
+    <Row code="013de8f0d">
+      <IdentityUser>
+        <Id>141e9288-c35f-4134-a203-5e857856d459</Id>
+        <UserName>admin</UserName>
+        <PasswordHash>AIL+4x/i5gfd+zs4yRvl4+xThCd5e85dQ4OEIUfjPdyRSItbnR1WWB5mbmC3fa8DMQ==</PasswordHash>
+        <Email>admin@immap.org</Email>
+        <FullName>Administrator</FullName>
+        <Type>Administrator</Type>
+        <Roles dataType="System.String" collType="generic">
+          <String>admin</String>
+        </Roles>
+      </IdentityUser>
+    </Row>
+  </Rows>
+</TablePage>

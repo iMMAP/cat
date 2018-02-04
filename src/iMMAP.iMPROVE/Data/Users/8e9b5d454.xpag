@@ -1,0 +1,17 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<TablePage>
+  <Rows dataType="Xod.PageRow" collType="generic" refType="complex">
+    <Row code="a3edf9ab9">
+      <ManagedUsersGroup>
+        <Id>1</Id>
+        <Managers dataType="System.String" collType="generic">
+          <String>manager</String>
+          <String>admin</String>
+        </Managers>
+        <Users dataType="System.String" collType="generic">
+          <String>msallam</String>
+        </Users>
+      </ManagedUsersGroup>
+    </Row>
+  </Rows>
+</TablePage>

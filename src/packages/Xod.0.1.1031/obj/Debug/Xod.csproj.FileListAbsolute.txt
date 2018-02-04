@@ -1,4 +1,0 @@
-D:\work\projects\github\xod\src\bin\Debug\Mhsallam.Xod.dll
-D:\work\projects\github\xod\src\bin\Debug\Mhsallam.Xod.pdb
-D:\work\projects\github\xod\src\obj\Debug\Mhsallam.Xod.dll
-D:\work\projects\github\xod\src\obj\Debug\Mhsallam.Xod.pdb

@@ -1,0 +1,184 @@
+﻿@model iMMAP.iMPROVE.Models.ViewModels.ProductsViewModel
+
+@{
+    Layout = "~/Views/Shared/_Dashboard.cshtml";
+}
+
+<section id="view-container">
+
+    <!-- Content Header (Page header) -->
+    <section class="content-header">
+        <h1>
+            Products
+            <small>My products explorer</small>
+        </h1>
+        <ol class="breadcrumb">
+            <li><a href="#"><i class="fa fa-dashboard"></i> iMPROVE/@@@User.Identity.Name </a></li>
+            <li class="active">Products</li>
+        </ol>
+    </section>
+
+    <!-- Main content -->
+    <!-- products table -->
+    <section class="content">
+        <div class="row">
+            <div class="col-xs-12">
+                <!-- /.box -->
+                <div class="box box-primary">
+                    <!-- /.box-header -->
+                    <div class="box-header">
+                        <h3 class="box-title">Products Table</h3>
+                    </div>
+
+                    <div class="box-body">
+                        <table id="table-products" class="table table-bordered table-striped">
+                            <thead>
+                                <tr>
+                                    <th>Product Name</th>
+                                    <th>Type</th>
+                                    <th>Month</th>
+                                    <th>Created At</th>
+                                    <th>Flags</th>
+                                    <th></th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                @if (Model != null)
+                                {
+                                    foreach (var p in Model.Products)
+                                    {
+                                        var pa = Model.ApprovalStatusList.LastOrDefault(s => s.ProductId == p.Id);
+                                        List<dynamic> pFlags = new List<dynamic>();
+                                        if(pa != null)
+                                        {
+                                            if (pa.ApprovalStatus == ProductApprovalStatus.Approved)
+                                            {
+                                                pFlags.Add(new { Tip = "Approved", Icon = "fa-check", Color = "green" });
+                                            }
+                                            else if(pa.ApprovalStatus == ProductApprovalStatus.Rejected)
+                                            {
+                                                pFlags.Add(new { Tip = "Rejected", Icon = "fa-times", Color = "red" });
+                                            }
+                                            else if (pa.ApprovalStatus == ProductApprovalStatus.Directions)
+                                            {
+                                                pFlags.Add(new { Tip = "Directions", Icon = "fa-info", Color = "blue" });
+                                            }
+                                            else
+                                            {
+                                                pFlags.Add(new { Tip = "Being Reviewed", Icon = "fa-clock", Color = "gray" });
+                                            }
+
+                                            if (p.HasDeleteRequest)
+                                            {
+                                                pFlags.Add(new { Tip = "To Be Deleted", Icon = "fa-trash", Color = "red" });
+                                            }
+                                        }
+
+                                        string pIconClass = "fa fa-file-pdf-o";
+                                        switch (p.Type.ToString())
+                                        {
+                                            case "Map":
+                                                pIconClass = "fa fa-map-o";
+                                                break;
+                                            case "Dashboard":
+                                                pIconClass = "fa fa-desktop";
+                                                break;
+                                            case "Report":
+                                                pIconClass = "fa fa-bar-chart";
+                                                break;
+                                            case "Tool":
+                                                pIconClass = "fa fa-file-excel-o";
+                                                break;
+                                            case "Infograph":
+                                                pIconClass = "fa fa-file-image-o";
+                                                break;
+                                        }
+
+                                        <tr>
+                                            <td>@p.Name</td>
+                                            <td><i class="@pIconClass"></i> @p.Type</td>
+                                            <td>@p.Month</td>
+                                            <td>@p.Created.ToShortDateString()</td>
+                                            <td>
+                                                @foreach(var flg in pFlags)
+                                                {
+                                                    <i title="@flg.Tip" class="fa @flg.Icon" style="color: @flg.Color;" />
+                                                }
+                                            </td>
+                                            <td>
+                                                <div class="btn-group btn-group-xs pull-right">
+                                                    <a class="btn btn-default" href="/manage/editProduct?id=@p.Id"><i class="fa fa-pencil"></i></a>
+                                                    <a class="btn btn-danger" href="javascript: deleteRequest('@p.Id');">
+                                                        <i class="fa fa-remove"></i>
+                                                    </a>
+                                                </div>
+                                            </td>
+                                        </tr>
+                                    }
+                                }
+                            </tbody>
+                        </table>
+                    </div>
+                    <!-- /.box-body -->
+                </div>
+                <!-- /.box -->
+            </div>
+            <!-- /.col -->
+        </div>
+        <!-- /.row -->
+    </section>
+    <!-- /.content -->
+    <!-- DataTables -->
+    @section prestyles {
+        @Styles.Render("~/bundles/plugincss/datatables")
+    }
+
+    @section postscripts {
+        @Scripts.Render("~/bundles/pluginjs/datatables")
+
+        <script type="text/javascript">
+            $('#table-products').DataTable(
+                {
+                    "columnDefs": [{
+                        "targets": 5,
+                        "orderable": false,
+                        "searchable": false,
+                        "width": "20%"
+                    }]
+                });
+
+            function deleteRequest(id) {
+                showModal('textPrompt',
+                    {
+                        title: 'Delete Product',
+                        parameters: [
+                            'Delete Clarification',
+                            'input-clarification', 'Please clarify why would you want to delete this product?'
+                        ]
+                    },
+                    (modalBody) => {
+                        ajaxCall({
+                            url: '/manage/deleteRequest',
+                            data: { id: id, message: modalBody.find('#input-clarification').val() },
+                            onSuccess: showAlert
+                        })
+                    })
+            }
+
+            //$('.dataTables_length select, .dataTables_filter input').addClass('form-control input-sm');
+        //{
+        //    "paging": true,
+        //    "lengthChange": false,
+        //    "searching": false,
+        //    "ordering": true,
+        //    "info": true,
+        //    "autoWidth": false
+        //}
+        </script>
+    }
+
+</section>
+
+@section SideMenu {
+    @Html.Partial("~/Views/Manage/_SideMenu.cshtml")
+}

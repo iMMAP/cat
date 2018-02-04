@@ -1,0 +1,33 @@
+﻿@model List<iMMAP.iMPROVE.Models.Notification>
+
+<table id="table-notifications" class="table table-bordered table-striped">
+    <thead>
+        <tr>
+            <th>Message</th>
+            <th>Sent At</th>
+            <th>Acknowledged</th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+        @if (Model != null)
+        {
+            foreach (var n in Model)
+            {
+                var nAcknowledgedClass = n.Acknowledged ? "fa fa-check" : "fa fa-exclamation";
+                <tr>
+                    <td><i class="fa fa-bell"></i> @n.Body</td>
+                    <td>@n.Sent</td>
+                    <td><i class="@nAcknowledgedClass"></i></td>
+                    <td>
+                        <div class="btn-group btn-group-xs pull-right">
+                            <a class="btn btn-primary" href="javascript: ajaxCall({url: '/manage/aknowledgeNotification', data: { id: '@n.Id' } });">
+                                <i class="fa fa-check"></i>
+                            </a>
+                        </div>
+                    </td>
+                </tr>
+            }
+        }
+    </tbody>
+</table>

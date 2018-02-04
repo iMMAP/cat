@@ -1,0 +1,99 @@
+﻿@model iMMAP.iMPROVE.Models.ViewModels.ProductVersionViewModel
+@{
+    ViewBag.Changes = iMMAP.iMPROVE.Core.Extensions.EnumExtensions.GetEnumList(typeof(iMMAP.iMPROVE.Models.ChangesType), Model.Changes);
+}
+
+<div class="box box-primary">
+    <div class="box-header with-border">
+        <h3 class="box-title">Add Version<span class="loading-spin pull-right"></span></h3>
+    </div>
+    @using (Ajax.BeginForm("AddProductVersion", "Manage", null,
+        new AjaxOptions() { HttpMethod = "POST", OnSuccess = "refreshProductVersions", OnFailure = "ajaxMessage" },
+        new { id = "form-addversion", role = "form" }))
+    {
+
+        <!-- /.box-header -->
+        <div class="box-body">
+            @Html.ValidationSummary(true)
+
+            <div class="form-group">
+                <label for="ProductFile">Product File</label>
+                <input type="file" id="ProductFile">
+                <p class="help-block">Please upload product .zip file based on the standarization of the product type</p>
+            </div>
+
+            <div class="form-group">
+                @Html.LabelFor(model => model.Changes)
+                <div class="input-group">
+                    <div class="input-group-addon">
+                        <i class="fa fa-asterisk"></i>
+                    </div>
+                    @Html.DropDownList("Changes", null, new { @class = "form-control" })
+                </div>
+                @Html.ValidationMessageFor(model => model.Changes)
+                <!-- /.input group -->
+            </div>
+
+            <div class="form-group">
+                @Html.LabelFor(model => model.Description)
+                @Html.TextBoxFor(model => model.Description, new { @class = "form-control" })
+                @Html.ValidationMessageFor(model => model.Description)
+            </div>
+
+            @Html.HiddenFor(model => model.ProductId)
+        </div>
+        
+        <!-- /.box-body -->
+        <div class="box-footer">
+            <button class="btn btn-primary" type="button" onclick="submitProductVresion()">Add New</button>
+        </div>
+        <!-- /.box-footer -->
+    }
+
+    <script type="text/javascript">
+        function submitProductVresion() {
+            showSpin();
+            var productFile = $('#ProductFile').get(0).files;
+            var uploadFiles = [
+                { files: productFile, max: 1048576, tag: 'addversion' },
+            ];
+            var uploadCount = 0;
+            var submitted = false;
+            for (var fi in uploadFiles) {
+                var files = uploadFiles[fi].files;
+                var max = uploadFiles[fi].max;
+                var tag = uploadFiles[fi].tag;
+                if (files && files.length > 0 && files[0]) {
+                    if (files[0].size <= max) {
+                        uploadCount++;
+                        uploadFile({
+                            file: files[0],
+                            dir: 'deliverables/@User.Identity.Name',
+                            tag: tag,
+                            code: '@Model.ProductId'
+                        },
+                            function () {
+                                uploadCount--;
+                                if (uploadCount == 0) {
+                                    submitted = true;
+                                    $('#form-addversion').submit();
+                                }
+                            });
+                    }
+                    else {
+                        if (!maxSizeTitle) {
+                            maxSizeTitle = localize('messages.file.maxfilesize', 'Maximum File Size');
+                            maxSizeMsg = localize('messages.file.maxfilesize', 'This file exceeds the maximum file size.');
+                        }
+                        showAlert(maxSizeTitle, maxSizeMsg);
+                    }
+                }
+            }
+
+            if (!submitted)
+                $('#form-addversion').submit();
+        }
+
+        refreshProductVersions();
+    </script>
+</div>
